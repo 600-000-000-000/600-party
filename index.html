@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>600 PARTY</title>
-  <link rel="icon" href="assets/favicon.ico" />
+  <link rel="icon" href="assets/600_small.png" type="image/png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet" />
@@ -35,13 +35,6 @@
       text-align: center;
     }
 
-    .hero img.logo {
-      width: 160px;
-      height: 160px;
-      object-fit: contain;
-      margin-bottom: 32px;
-    }
-
     .hero h1 {
       font-size: clamp(72px, 20vw, 180px);
       line-height: 0.9;
@@ -51,6 +44,14 @@
 
     .hero h1 span {
       display: block;
+    }
+
+    .party-headline {
+      font-size: clamp(56px, 16vw, 140px);
+      letter-spacing: 0.1em;
+      color: var(--black);
+      line-height: 1;
+      margin-top: 16px;
     }
 
     .tagline {
@@ -242,12 +243,13 @@
 
   <!-- HERO -->
   <div class="hero">
-    <img class="logo" src="assets/600.png" alt="600" />
     <h1>
       <span>600</span>
-      <span>PAR</span>
-      <span>TY</span>
+      <span>000</span>
+      <span>000</span>
+      <span>000</span>
     </h1>
+    <h2 class="party-headline">PARTY</h2>
     <p class="tagline">LIVE MUSIC &nbsp;·&nbsp; SETS &nbsp;·&nbsp; DJS</p>
   </div>
 
@@ -394,7 +396,10 @@
 
   <!-- FOOTER -->
   <footer>
-    <a href="https://600.wtf" target="_blank" rel="noopener">600.WTF</a>
+    <a href="https://600.wtf" target="_blank" rel="noopener">
+      <img src="assets/600.png" alt="600" style="width: 80px; height: 80px; object-fit: contain; display: block; margin: 0 auto 16px;" />
+      600.WTF
+    </a>
     &nbsp;·&nbsp;
     <a href="https://www.fuchs2.cz/" target="_blank" rel="noopener">FUCHS2.CZ</a>
   </footer>
