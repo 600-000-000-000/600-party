@@ -1,0 +1,211 @@
+/* ============================================================
+   600B DESIGN SYSTEM — colors & type
+   Source of truth: 600.wtf style.css + 600B Universe canon doc.
+   We stack. We build. We meme. We repeat.
+   ============================================================ */
+
+/* ---- FONTS ---------------------------------------------------
+   The live site uses system fonts: Impact for display,
+   Trebuchet MS for body, Georgia for paragraph accents.
+   No webfonts are shipped. We mirror that and add JetBrains Mono
+   for the sacred number stack.
+   ------------------------------------------------------------ */
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=JetBrains+Mono:wght@400;600;800&display=swap");
+
+:root {
+  /* ============ COLOR — CORE PALETTE ============ */
+  /* The signal is orange. Bitcoin-orange, specifically. */
+  --c-orange:           #f7931a;   /* Primary. Site body bg. The signal. */
+  --c-orange-bright:    #ffa733;   /* Hover / lift */
+  --c-orange-deep:      #d97a00;   /* Press / shadow side */
+  --c-ember:            #ff6a00;   /* Ember accent — fire, urgency */
+  --c-gold:             #f3c244;   /* Gold accent — ritual, ordinals */
+
+  /* Volcanic / Madeira / shadow side */
+  --c-volcanic:         #2a1810;   /* Volcanic brown — deep earth */
+  --c-charcoal:         #222222;   /* Charcoal — ordinals bg, frames */
+  --c-black:            #000000;   /* Stone black */
+  --c-soot:             #111111;   /* Near-black surface */
+
+  /* Light */
+  --c-ember-white:      #fff7ec;   /* Warm off-white — paper, parchment */
+  --c-white:            #ffffff;   /* Pure white — text on orange */
+  --c-bone:             #e8dfcf;   /* Aged bone — quiet text on dark */
+
+  /* ============ COLOR — SEMANTIC / FOREGROUND ============ */
+  --bg:                 var(--c-orange);
+  --bg-alt:             var(--c-charcoal);
+  --bg-shadow:          var(--c-black);
+  --bg-paper:           var(--c-ember-white);
+  --bg-warm:            var(--c-volcanic);
+
+  --fg:                 var(--c-white);          /* On orange */
+  --fg-2:               #fde7c5;                 /* Muted on orange */
+  --fg-on-dark:         var(--c-ember-white);    /* On charcoal/black */
+  --fg-on-dark-2:       var(--c-bone);
+  --fg-on-paper:        var(--c-volcanic);
+  --fg-accent:          var(--c-orange);         /* Headlines on dark/light */
+
+  --border:             rgba(0, 0, 0, 0.18);
+  --border-strong:      rgba(0, 0, 0, 0.45);
+  --border-on-dark:     rgba(247, 147, 26, 0.35);
+  --rule:               rgba(255, 255, 255, 0.18);
+
+  /* ============ STATES ============ */
+  --link:               var(--c-white);
+  --link-on-dark:       var(--c-orange);
+  --hover-decoration:   wavy;                    /* From real site CSS */
+  --hover-lift:         var(--c-orange-bright);
+  --press-shrink:       0.97;
+
+  /* ============ TYPE — FAMILIES ============ */
+  --font-display:       Impact, "Haettenschweiler", "Arial Narrow Bold", sans-serif;
+  --font-display-alt:   "Bebas Neue", Impact, sans-serif;
+  --font-body:          "Trebuchet MS", "Helvetica Neue", Arial, sans-serif;
+  --font-serif:         Georgia, "Times New Roman", serif;
+  --font-mono:          "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  --font-sacred:        Impact, "Arial Narrow Bold", sans-serif;
+
+  /* ============ TYPE — SCALE ============ */
+  --fs-monolith:        clamp(120px, 28vw, 480px);  /* The 600 stack */
+  --fs-banner:          clamp(64px, 9vw, 144px);
+  --fs-h1:              48px;
+  --fs-h2:              30px;
+  --fs-h3:              18px;
+  --fs-body:            17px;       /* Site uses 17px Georgia for paragraphs */
+  --fs-body-sans:       16px;
+  --fs-small:           14px;
+  --fs-micro:           12px;
+
+  /* Weights, leading, tracking */
+  --fw-display:         800;
+  --fw-bold:            700;
+  --fw-regular:         400;
+  --lh-tight:           1.05;
+  --lh-snug:            1.3;
+  --lh-body:            1.6;        /* Matches site body line-height */
+  --lh-serif:           1.7;
+  --lh-monolith:        0.77;       /* Matches site h1 */
+  --tracking-display:   0.04em;
+  --tracking-body:      0.01em;
+
+  /* ============ SPACING ============ */
+  --sp-1:   4px;
+  --sp-2:   8px;
+  --sp-3:   12px;
+  --sp-4:   16px;
+  --sp-5:   24px;
+  --sp-6:   32px;
+  --sp-7:   48px;
+  --sp-8:   64px;
+  --sp-9:   96px;
+  --sp-10:  128px;
+
+  /* ============ RADII ============ */
+  --r-0:    0px;       /* Default — most surfaces are sharp */
+  --r-1:    4px;       /* Tight chips */
+  --r-2:    8px;
+  --r-stone: 50%;      /* The 600B stone is round */
+  --r-pill: 999px;
+
+  /* ============ SHADOWS / GLOW ============ */
+  --sh-stone:   0 12px 32px rgba(0, 0, 0, 0.45), 0 2px 6px rgba(0, 0, 0, 0.35);
+  --sh-ember:   0 0 24px rgba(255, 106, 0, 0.55), 0 0 64px rgba(247, 147, 26, 0.35);
+  --sh-card:    0 8px 24px rgba(0, 0, 0, 0.25);
+  --sh-press:   inset 0 2px 6px rgba(0, 0, 0, 0.35);
+  --glow-signal: 0 0 0 4px rgba(247, 147, 26, 0.35);
+
+  /* ============ MOTION ============ */
+  --ease-standard:  cubic-bezier(0.2, 0.8, 0.2, 1);
+  --ease-pulse:     cubic-bezier(0.4, 0, 0.6, 1);
+  --dur-fast:       120ms;
+  --dur-base:       240ms;
+  --dur-slow:       480ms;
+  --dur-ritual:     1200ms;
+}
+
+/* ============ SEMANTIC ELEMENTS ============ */
+.h-monolith,
+.sacred-number {
+  font-family: var(--font-sacred);
+  font-weight: var(--fw-display);
+  font-size: var(--fs-monolith);
+  line-height: var(--lh-monolith);
+  letter-spacing: 0;
+  text-transform: none;
+  word-spacing: 100vw; /* forces 4-line stack on real <h1> */
+}
+
+.h-banner {
+  font-family: var(--font-display);
+  font-weight: var(--fw-display);
+  font-size: var(--fs-banner);
+  line-height: var(--lh-tight);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-display);
+}
+
+.h1 {
+  font-family: var(--font-display);
+  font-weight: var(--fw-display);
+  font-size: var(--fs-h1);
+  line-height: var(--lh-tight);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-display);
+}
+.h2 {
+  font-family: var(--font-display);
+  font-weight: var(--fw-display);
+  font-size: var(--fs-h2);
+  line-height: var(--lh-tight);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-display);
+}
+.h3 {
+  font-family: var(--font-body);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-h3);
+  line-height: var(--lh-snug);
+}
+.body,
+p {
+  font-family: var(--font-serif);
+  font-size: var(--fs-body);
+  line-height: var(--lh-serif);
+}
+.body-sans {
+  font-family: var(--font-body);
+  font-size: var(--fs-body-sans);
+  line-height: var(--lh-body);
+  letter-spacing: var(--tracking-body);
+}
+.code,
+code,
+.mono {
+  font-family: var(--font-mono);
+  font-size: 0.95em;
+}
+.eyebrow {
+  font-family: var(--font-display);
+  font-weight: var(--fw-display);
+  font-size: var(--fs-micro);
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+}
+
+/* ============ BASE ============ */
+html, body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-body);
+  line-height: var(--lh-body);
+  letter-spacing: var(--tracking-body);
+}
+
+a, a:visited {
+  color: var(--link);
+  font-weight: var(--fw-bold);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.14em;
+}
+a:hover { text-decoration-style: var(--hover-decoration); }

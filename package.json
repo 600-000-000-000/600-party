@@ -1,0 +1,16 @@
+{
+  "name": "600-party",
+  "private": true,
+  "version": "0.1.0",
+  "description": "600 PARTY — 11 June 2026 · Fuchs 2 · Prague. Static landing page.",
+  "scripts": {
+    "build": "node build.mjs",
+    "test:e2e": "playwright test",
+    "test:install": "playwright install --with-deps chromium"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.26.0",
+    "@babel/preset-react": "^7.26.0",
+    "@playwright/test": "^1.49.0"
+  }
+}
