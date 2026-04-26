@@ -384,6 +384,25 @@
       margin-bottom: 2px;
     }
 
+    .ticket-btn {
+      display: inline-block;
+      background: var(--orange);
+      color: var(--black);
+      font-family: 'Anton', sans-serif;
+      font-size: clamp(20px, 5vw, 36px);
+      letter-spacing: 0.15em;
+      text-decoration: none;
+      padding: 18px 48px;
+      transition: background 0.2s, color 0.2s, transform 0.2s, box-shadow 0.2s;
+    }
+
+    .ticket-btn:hover {
+      background: var(--white);
+      color: var(--black);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+    }
+
     footer a { color: var(--orange); text-decoration: none; }
     footer a:hover { color: var(--white); }
   </style>
@@ -419,7 +438,7 @@
         <div style="font-family: sans-serif; font-size: 11px; letter-spacing: 0.15em; color: #888; margin-top: 6px;">BITCOIN OR FIAT</div>
       </div>
     </div>
-    <a href="https://lnbits.600.wtf/events/FT5HhuhSWHdhswmxZXCvMD" target="_blank" rel="noopener" style="display: inline-block; background: var(--orange); color: var(--black); font-family: 'Anton', sans-serif; font-size: clamp(20px, 5vw, 36px); letter-spacing: 0.15em; text-decoration: none; padding: 18px 48px; transition: opacity 0.15s;">GET TICKETS ↗</a>
+    <a href="https://lnbits.600.wtf/events/FT5HhuhSWHdhswmxZXCvMD" target="_blank" rel="noopener" class="ticket-btn">GET TICKETS ↗</a>
   </div>
 
   <!-- LOCATION -->
