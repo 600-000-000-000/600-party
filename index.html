@@ -235,7 +235,7 @@
     .sponsors-label {
       font-size: 11px;
       letter-spacing: 0.35em;
-      color: #555;
+      color: #888;
       font-family: sans-serif;
       margin-bottom: 32px;
     }
@@ -261,16 +261,20 @@
     .sponsor-item:hover { opacity: 1; }
 
     .sponsor-item img {
-      width: 64px;
-      height: 64px;
+      width: 169px;
       object-fit: contain;
+      filter: grayscale(1) brightness(1.5);
+      transition: filter 0.4s;
     }
 
-    .sponsor-item span {
-      font-size: 11px;
-      letter-spacing: 0.2em;
-      color: var(--orange);
-      font-family: sans-serif;
+    .sponsor-item:hover img {
+      filter: grayscale(0) brightness(1);
+    }
+
+    .sponsor-item--plain img,
+    .sponsor-item--plain:hover img {
+      filter: none;
+      transition: none;
     }
 
     /* FOOTER */
@@ -432,8 +436,7 @@
   <div style="background: var(--orange);">
     <section>
       <p class="section-title">DJS</p>
-      <p class="dj-time">THROUGHOUT THE NIGHT &nbsp;·&nbsp; CONTINUOUS 12:30 AM – 3 AM</p>
-      <div class="dj-list">
+<div class="dj-list">
         <span class="dj-chip">MAD MUNKY</span>
         <span class="dj-chip">ANDY PRINCZ</span>
         <span class="dj-chip">AKME</span>
@@ -448,19 +451,16 @@
     <p class="sponsors-label">SPONSORED BY</p>
     <div class="sponsors-grid">
 
-      <a class="sponsor-item" href="https://boltz.exchange" target="_blank" rel="noopener">
+      <a class="sponsor-item" href="https://boltz.exchange" target="_blank" rel="noopener" title="Boltz Exchange">
         <img src="assets/boltz.svg" alt="Boltz Exchange" />
-        <span>BOLTZ.EXCHANGE</span>
       </a>
 
-      <a class="sponsor-item" href="https://lnbits.com" target="_blank" rel="noopener">
+      <a class="sponsor-item sponsor-item--plain" href="https://600.wtf" target="_blank" rel="noopener" title="600.WTF">
+        <img src="assets/600.png" alt="600" style="width: 80px;" />
+      </a>
+
+      <a class="sponsor-item" href="https://lnbits.com" target="_blank" rel="noopener" title="LNBits">
         <img src="assets/lnbits.svg" alt="LNBits" />
-        <span>LNBITS.COM</span>
-      </a>
-
-      <a class="sponsor-item" href="https://600.wtf" target="_blank" rel="noopener">
-        <img src="assets/600.png" alt="600" />
-        <span>600.WTF</span>
       </a>
 
     </div>
@@ -468,11 +468,6 @@
 
   <!-- FOOTER -->
   <footer>
-    <a href="https://600.wtf" target="_blank" rel="noopener">
-      <img src="assets/600.png" alt="600" style="width: 80px; height: 80px; object-fit: contain; display: block; margin: 0 auto 16px;" />
-      600.WTF
-    </a>
-    &nbsp;·&nbsp;
     <a href="https://www.fuchs2.cz/" target="_blank" rel="noopener">FUCHS2.CZ</a>
     &nbsp;·&nbsp;
     <a href="https://bitcoinessex.co.uk/new-music-nudge-unit" target="_blank" rel="noopener">BITCOINESSEX.CO.UK</a>
