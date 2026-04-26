@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>600000000000 Extravaganza!</title>
+  <title>600000000000 Prague Party</title>
 
   <!-- SEO -->
-  <meta name="description" content="600000000000 Extravaganza! — live music, sets & DJs at Fuchs 2, Ostrov Štvanice, Praha 7. Featuring Longy, The Greensands, Horse Heads, G.O.L.D, and more." />
+  <meta name="description" content="600000000000 Prague Party — live music, sets & DJs at Fuchs 2, Ostrov Štvanice, Praha 7. Featuring Longy, The Greensands, Horse Heads, G.O.L.D, and more." />
   <meta name="keywords" content="600 billion, prague party, bitcoin prague, live music prague, btc party, fuchs2, lightning network party" />
   <meta name="author" content="600.WTF" />
   <link rel="canonical" href="https://600000000000.com" />
@@ -107,46 +107,85 @@
 
     /* LOCATION STRIP */
     .location-strip {
-      background: var(--black);
-      padding: 40px 24px;
+      position: relative;
+      padding: 80px 24px;
       text-align: center;
+      overflow: hidden;
+    }
+
+    .location-strip iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+      pointer-events: none;
+      filter: grayscale(0.3);
+    }
+
+    .location-strip .map-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(247, 146, 26, 0.65);
+    }
+
+    .location-strip .map-content {
+      position: relative;
+      z-index: 3;
+      width: fit-content;
+      margin: 0 auto;
     }
 
     .location-strip .label {
       font-size: 13px;
       letter-spacing: 0.3em;
-      color: var(--orange);
+      color: var(--black);
       margin-bottom: 12px;
     }
 
     .location-strip .venue-name {
       font-size: clamp(32px, 8vw, 64px);
       letter-spacing: 0.08em;
-      color: var(--white);
+      color: var(--black);
       line-height: 1;
     }
 
     .location-strip .venue-address {
-      font-size: clamp(14px, 3vw, 20px);
-      letter-spacing: 0.2em;
-      color: #888;
-      margin-top: 10px;
+      font-size: clamp(15px, 3vw, 20px);
+      letter-spacing: 0.05em;
+      color: var(--black);
+      margin-top: 12px;
       font-family: sans-serif;
-      font-weight: 400;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      line-height: 1;
     }
+
+    .location-strip .venue-address svg {
+      flex-shrink: 0;
+      width: 18px;
+      height: 18px;
+      fill: var(--black);
+      position: relative;
+      top: -1px;
+    }
+
 
     .location-strip a {
       display: inline-block;
-      margin-top: 20px;
-      color: var(--orange);
+      margin-top: 8px;
+      color: var(--black);
       font-size: 13px;
       letter-spacing: 0.2em;
       text-decoration: none;
-      border-bottom: 1px solid var(--orange);
+      border-bottom: 1px solid var(--black);
       padding-bottom: 2px;
     }
 
-    .location-strip a:hover { color: var(--white); border-color: var(--white); }
+    .location-strip a:hover { opacity: 0.6; }
 
     /* SECTION */
     section {
@@ -360,8 +399,8 @@
       <span>000</span>
     </h1>
     <h2 class="party-headline">
-      <span>EXTRAVAGANZA!</span>
-      <span class="party-headline-detail">PRAGUE &nbsp;·&nbsp; XTH JUNE 2026 &nbsp;·&nbsp; 19:30</span>
+      <span>PRAGUE PARTY</span>
+      <span class="party-headline-detail">XTH JUNE 2026 &nbsp;·&nbsp; 19:30</span>
     </h2>
     <p class="tagline">LIVE MUSIC &nbsp;·&nbsp; SETS &nbsp;·&nbsp; DJS</p>
   </div>
@@ -384,13 +423,16 @@
   </div>
 
   <!-- LOCATION -->
-  <div style="background: var(--orange);">
-    <section style="text-align: center;">
-      <p class="section-title">VENUE</p>
-      <p style="font-size: clamp(32px, 8vw, 64px); letter-spacing: 0.08em; color: var(--black); line-height: 1;">FUCHS 2</p>
-      <p style="font-size: clamp(14px, 3vw, 20px); letter-spacing: 0.2em; color: rgba(0,0,0,0.5); margin-top: 10px; font-family: sans-serif; font-weight: 400;">Ostrov Štvanice &nbsp;·&nbsp; Praha 7, Holešovice</p>
-      <a href="https://www.fuchs2.cz/" target="_blank" rel="noopener" style="display: inline-block; margin-top: 20px; color: var(--black); font-size: 13px; letter-spacing: 0.2em; text-decoration: none; border-bottom: 1px solid var(--black); padding-bottom: 2px;">fuchs2.cz ↗</a>
-    </section>
+  <div class="location-strip">
+    <a href="https://www.openstreetmap.org/?mlat=50.0952&amp;mlon=14.4363#map=16/50.0952/14.4363" target="_blank" rel="noopener" style="position:absolute;inset:0;z-index:2;"></a>
+    <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=14.421%2C50.085%2C14.471%2C50.105&amp;layer=mapnik&amp;marker=50.0952%2C14.4363" title="Map"></iframe>
+    <div class="map-overlay"></div>
+    <div class="map-content">
+      <p class="label">LOCATION</p>
+      <p class="venue-name">FUCHS2</p>
+      <p class="venue-address">Ostrov Štvanice &nbsp;·&nbsp; Praha 7, Holešovice</p>
+      <a href="https://www.fuchs2.cz/" target="_blank" rel="noopener">fuchs2.cz ↗</a>
+    </div>
   </div>
 
   <!-- BANDS -->
