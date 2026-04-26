@@ -224,6 +224,55 @@
       margin-bottom: 28px;
     }
 
+    /* SPONSORED BY */
+    .sponsors {
+      background: var(--black);
+      text-align: center;
+      padding: 48px 24px;
+      border-top: 1px solid rgba(255,122,0,0.2);
+    }
+
+    .sponsors-label {
+      font-size: 11px;
+      letter-spacing: 0.35em;
+      color: #555;
+      font-family: sans-serif;
+      margin-bottom: 32px;
+    }
+
+    .sponsors-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .sponsor-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      opacity: 0.75;
+      transition: opacity 0.15s;
+    }
+
+    .sponsor-item:hover { opacity: 1; }
+
+    .sponsor-item img {
+      width: 64px;
+      height: 64px;
+      object-fit: contain;
+    }
+
+    .sponsor-item span {
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      color: var(--orange);
+      font-family: sans-serif;
+    }
+
     /* FOOTER */
     footer {
       background: var(--black);
@@ -389,9 +438,32 @@
         <span class="dj-chip">ANDY PRINCZ</span>
         <span class="dj-chip">AKME</span>
         <span class="dj-chip">DJ KULLA w/ RAS KALEB</span>
-        <span class="dj-chip">ROOTZALL</span>
+        <span class="dj-chip">ROOTZOLL</span>
       </div>
     </section>
+  </div>
+
+  <!-- SPONSORED BY -->
+  <div class="sponsors">
+    <p class="sponsors-label">SPONSORED BY</p>
+    <div class="sponsors-grid">
+
+      <a class="sponsor-item" href="https://boltz.exchange" target="_blank" rel="noopener">
+        <img src="assets/boltz.svg" alt="Boltz Exchange" />
+        <span>BOLTZ.EXCHANGE</span>
+      </a>
+
+      <a class="sponsor-item" href="https://lnbits.com" target="_blank" rel="noopener">
+        <img src="assets/lnbits.svg" alt="LNBits" />
+        <span>LNBITS.COM</span>
+      </a>
+
+      <a class="sponsor-item" href="https://600.wtf" target="_blank" rel="noopener">
+        <img src="assets/600.png" alt="600" />
+        <span>600.WTF</span>
+      </a>
+
+    </div>
   </div>
 
   <!-- FOOTER -->
@@ -402,6 +474,16 @@
     </a>
     &nbsp;·&nbsp;
     <a href="https://www.fuchs2.cz/" target="_blank" rel="noopener">FUCHS2.CZ</a>
+    &nbsp;·&nbsp;
+    <a href="https://bitcoinessex.co.uk/new-music-nudge-unit" target="_blank" rel="noopener">BITCOINESSEX.CO.UK</a>
+    &nbsp;·&nbsp;
+    <a href="https://2140art.com" target="_blank" rel="noopener">2140ART.COM</a>
+    &nbsp;·&nbsp;
+    <a href="https://bitfest.uk" target="_blank" rel="noopener">BITFEST.UK</a>
+    &nbsp;·&nbsp;
+    <a href="https://lnbits.com" target="_blank" rel="noopener">LNBITS.COM</a>
+    &nbsp;·&nbsp;
+    <a href="https://btcprague.com" target="_blank" rel="noopener">BTCPRAGUE.COM</a>
   </footer>
 
 </body>
