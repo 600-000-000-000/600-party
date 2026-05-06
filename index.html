@@ -396,7 +396,7 @@
     .sponsor-item:hover { opacity: 1; }
 
     .partners-grid .sponsor-item img {
-      width: 100px;
+      width: 75px;
     }
 
     .sponsor-item img,
@@ -420,6 +420,51 @@
 
     .sponsor-item--plain:hover img {
       transform: rotate(360deg);
+    }
+
+    /* FAQ */
+    .faq-item {
+      border-bottom: 1px solid rgba(0,0,0,0.2);
+    }
+
+    .faq-item:first-of-type {
+      border-top: 1px solid rgba(0,0,0,0.2);
+    }
+
+    .faq-q {
+      list-style: none;
+      cursor: pointer;
+      padding: 18px 0;
+      font-family: 'Anton', sans-serif;
+      font-size: 16px;
+      letter-spacing: 0.05em;
+      color: var(--black);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .faq-q::-webkit-details-marker { display: none; }
+
+    .faq-q::after {
+      content: '+';
+      font-size: 22px;
+      line-height: 1;
+      flex-shrink: 0;
+      transition: transform 0.2s ease;
+    }
+
+    details[open] .faq-q::after {
+      transform: rotate(45deg);
+    }
+
+    .faq-a {
+      font-family: sans-serif;
+      font-size: 14px;
+      line-height: 1.7;
+      color: var(--black);
+      padding-bottom: 18px;
     }
 
     /* FOOTER */
@@ -738,17 +783,32 @@
   <div style="background: var(--orange);">
     <section>
       <p class="section-title" style="color: var(--black);">FAQ</p>
-      <div style="max-width: 640px; margin: 0 auto; font-family: sans-serif; color: var(--black);">
+      <div style="max-width: 640px; margin: 0 auto;">
 
-        <div style="margin-bottom: 28px;">
-          <div style="font-size: 11px; letter-spacing: 0.25em; font-weight: bold; margin-bottom: 6px;">CONTACT</div>
-          <div style="font-size: 15px;"><a href="mailto:600B@japan.me" style="color: var(--black); text-decoration: underline;">600B@japan.me</a></div>
-        </div>
+        <details class="faq-item">
+          <summary class="faq-q">What is 600,000,000,000?</summary>
+          <div class="faq-a">600bn is a group of builders, activists, entrepreneurs, friends with a common philosophy centred around freedom, sovereignty and Bitcoin. 600bn is a global collective of thinkers and fun having individuals spreading Bitcoin awareness in the most epic ways. 600bn is everywhere. Contrary to urban legend 600bn is not a cult!</div>
+        </details>
 
-        <div style="margin-bottom: 28px;">
-          <div style="font-size: 11px; letter-spacing: 0.25em; font-weight: bold; margin-bottom: 6px;">PAYMENTS</div>
-          <div style="font-size: 15px; line-height: 1.6;">The first 210 tickets are Lightning only. After that, tickets can also be purchased with Stripe.</div>
-        </div>
+        <details class="faq-item">
+          <summary class="faq-q">Why are the first 210 tickets only available in Bitcoin?</summary>
+          <div class="faq-a">Again, 600bn is a movement born of the Bitcoin community, so Bitcoiners come first. Tickets are still available via Fiat payments, however the 210 discount tickets are an ode to the community the event represents.</div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-q">How do I get to the venue from BTC Prague?</summary>
+          <div class="faq-a">Here is a link to a <a href="https://maps.app.goo.gl/ujV95BC2DmGM1nX27" target="_blank" rel="noopener" style="color: var(--black);">Google Maps directions list</a>.</div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-q">How can I get involved in the event?</summary>
+          <div class="faq-a">Sponsors, partners, musicians and/or artists can reach out directly to us here: <a href="mailto:600B@japan.me" style="color: var(--black);">600B@japan.me</a></div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-q">I have a question/issue, who do I contact?</summary>
+          <div class="faq-a">If you have a general query or are having problems booking tickets, please contact us here: <a href="mailto:600B@japan.me" style="color: var(--black);">600B@japan.me</a></div>
+        </details>
 
       </div>
     </section>
